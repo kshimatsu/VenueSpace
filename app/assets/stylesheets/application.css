@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
 .large-outer-container {
   text-align: center;
 }
@@ -36,8 +37,16 @@
 }
 
 .header {
-  background-color: #99F2FF;
-  height: 150px;
+  background-image: url(background-title.jpg);
+  height: 300px;
+}
+
+.btn {
+  margin-left: 20px;
+}
+.search-options {
+  padding-top: 230px;
+  padding-left: 400px;
 }
 
 .yield-container {
