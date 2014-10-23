@@ -7,6 +7,11 @@ class VenuesController < ApplicationController
     @venues = Venue.all
   end
 
+  #Search result of venues
+  def search
+    @venues = Venue.all
+  end
+
   # GET /venues/1
   # GET /venues/1.json
   def show

@@ -2,7 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.main-container-left-bar {
-  border: 3px solid #4D797F;
+.image-container {
+  float: left;
 }
+/*.main-container-left-bar {
+  border: 1px solid #4D797F;
+  margin: 10px 10px 10px 0px;
+}*/
+
+.image-container {
+  width: 200px;
+  border: 2px solid pink;
+  margin: 5px 5px 5px 5px;
+  float: left;
+}
+
+img {
+  width: 196px;
+}
+
+.main-container-body {
+  margin-top: 15px;
+}
+
