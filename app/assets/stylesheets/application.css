@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+.large-outer-container {
+  text-align: center;
+}
+
+.corner-title {
+  float: left;
+  padding: 10px 10px 10px 10px;
+}
+.login {
+  float: right;
+  padding: 10px 10px 10px 10px;
+}
+
+.checkbox {
+  float: right;
+}
+
+.btn {
+  float: right;
+}
+
+.header {
+  background-color: #99F2FF;
+  height: 150px;
+}
+
+.yield-container {
+  text-align: center
+}

@@ -8,17 +8,6 @@ class CreateVenues < ActiveRecord::Migration
       t.string :state
       t.integer :zip
       t.string :email
-      t.stringrails :website
-      t.string :generate
-      t.string :scaffold
-      t.string :Venue
-      t.string :name
-      t.integer :phone_number
-      t.string :address
-      t.string :city
-      t.string :state
-      t.integer :zip
-      t.string :email
       t.string :website
       t.string :facebook
       t.string :twitter

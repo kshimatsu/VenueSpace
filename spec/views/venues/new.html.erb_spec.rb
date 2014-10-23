@@ -10,17 +10,6 @@ RSpec.describe "venues/new", :type => :view do
       :state => "MyString",
       :zip => 1,
       :email => "MyString",
-      :website => "",
-      :generate => "MyString",
-      :scaffold => "MyString",
-      :Venue => "MyString",
-      :name => "MyString",
-      :phone_number => 1,
-      :address => "MyString",
-      :city => "MyString",
-      :state => "MyString",
-      :zip => 1,
-      :email => "MyString",
       :website => "MyString",
       :facebook => "MyString",
       :twitter => "MyString",
@@ -44,28 +33,6 @@ RSpec.describe "venues/new", :type => :view do
     render
 
     assert_select "form[action=?][method=?]", venues_path, "post" do
-
-      assert_select "input#venue_name[name=?]", "venue[name]"
-
-      assert_select "input#venue_phone_number[name=?]", "venue[phone_number]"
-
-      assert_select "input#venue_address[name=?]", "venue[address]"
-
-      assert_select "input#venue_city[name=?]", "venue[city]"
-
-      assert_select "input#venue_state[name=?]", "venue[state]"
-
-      assert_select "input#venue_zip[name=?]", "venue[zip]"
-
-      assert_select "input#venue_email[name=?]", "venue[email]"
-
-      assert_select "input#venue_website[name=?]", "venue[website]"
-
-      assert_select "input#venue_generate[name=?]", "venue[generate]"
-
-      assert_select "input#venue_scaffold[name=?]", "venue[scaffold]"
-
-      assert_select "input#venue_Venue[name=?]", "venue[Venue]"
 
       assert_select "input#venue_name[name=?]", "venue[name]"
 
