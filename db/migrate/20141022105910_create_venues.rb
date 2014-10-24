@@ -24,6 +24,7 @@ class CreateVenues < ActiveRecord::Migration
       t.boolean :coordinator
       t.float :space
       t.float :capacity
+      t.integer :budget
 
       t.timestamps
     end

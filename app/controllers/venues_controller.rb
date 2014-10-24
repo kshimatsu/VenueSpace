@@ -9,7 +9,26 @@ class VenuesController < ApplicationController
 
   #Search result of venues
   def search
-    @venues = Venue.where city: params[:city].capitalize
+    budget = 0
+    if params[:budget_1] == 'on'
+      budget = 1
+    end
+    if params[:budget_2] == 'on'
+      budget = 2
+    end
+    if params[:budget_3] =='on'
+      budget = 3
+    end
+
+    if params[:city] != '' && budget != 0
+      @venues = Venue.where city: params[:city], budget: budget
+    elsif params[:city] == ''
+      @venues = Venue.where budget: budget
+    elsif params[:city] != ''
+      @venues = Venue.where city: params[:city]
+    else
+      @venues = Venue.all
+    end
   end
 
   # GET /venues/1

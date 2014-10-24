@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Venue.create name: 'San Diego Zoo', city: 'San Diego', state: 'CA'
-Venue.create name: 'Kowloon Park', city: 'Hong Kong', state: nil
-Venue.create name: 'IFC', city: 'Hong Kong', state: nil
+Venue.create name: 'San Diego Zoo', city: 'San Diego', state: 'CA', budget: 1
+Venue.create name: 'Kowloon Park', city: 'Hong Kong', state: nil, budget: 2
+Venue.create name: 'IFC', city: 'Hong Kong', state: nil, budget: 3

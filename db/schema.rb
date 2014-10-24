@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20141022105910) do
     t.boolean  "outdoors"
     t.boolean  "handicap"
     t.boolean  "coordinator"
+    t.integer  "budget"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
