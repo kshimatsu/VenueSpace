@@ -9,7 +9,7 @@ class VenuesController < ApplicationController
 
   #Search result of venues
   def search
-    @venues = Venue.all
+    @venues = Venue.where city: params[:city].capitalize
   end
 
   # GET /venues/1

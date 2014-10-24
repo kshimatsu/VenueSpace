@@ -1,83 +1,65 @@
-<div class="main-container">
-    <div class="main-container-row">
-      <div class="main-container-left-bar col-md-2 col-lg-2 col-lg-offset-1">
-        <h2>Side bar</h2>
-        <p> slkjasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f fkasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f fkasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjas</p>
+<h1>Search Results</h1>
 
-      </div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone number</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th>Instagram</th>
+      <th>Space</th>
+      <th>Capacity</th>
+      <th>Available parking</th>
+      <th>Changing rooms</th>
+      <th>Restrooms</th>
+      <th>Electric outlets</th>
+      <th>Indoors</th>
+      <th>Outdoors</th>
+      <th>Handicap</th>
+      <th>Coordinator</th>
+      <th>Space</th>
+      <th>Capacity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-
-
-      <div class="main-container-body col-xs-12 col-sm-12 col-md-10 col-lg-8">
-        <h1>Listing venue search results</h1>
-          <p> kasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f fkasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f fkasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f fkasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f fkasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f fkasdfkasj flaksdj flsakdh a;skgjlashg jaghfl kjadfl kjfalkj adlfjghkl ajsfhgkl jdflk gjdfghj fhgkl jsaf lkjaslf kjhsakl fs ksdkj f f
-        <!-- <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Phone number</th>
-              <th>Address</th>
-              <th>City</th>
-              <th>State</th>
-              <th>Zip</th>
-              <th>Email</th>
-              <th>Website</th>
-              <th>Facebook</th>
-              <th>Twitter</th>
-              <th>Instagram</th>
-              <th>Space</th>
-              <th>Capacity</th>
-              <th>Available parking</th>
-              <th>Changing rooms</th>
-              <th>Restrooms</th>
-              <th>Electric outlets</th>
-              <th>Indoors</th>
-              <th>Outdoors</th>
-              <th>Handicap</th>
-              <th>Coordinator</th>
-              <th>Space</th>
-              <th>Capacity</th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @venues.each do |venue| %>
-              <tr>
-                <td><%= venue.name %></td>
-                <td><%= venue.phone_number %></td>
-                <td><%= venue.address %></td>
-                <td><%= venue.city %></td>
-                <td><%= venue.state %></td>
-                <td><%= venue.zip %></td>
-                <td><%= venue.email %></td>
-                <td><%= venue.website %></td>
-                <td><%= venue.facebook %></td>
-                <td><%= venue.twitter %></td>
-                <td><%= venue.instagram %></td>
-                <td><%= venue.space %></td>
-                <td><%= venue.capacity %></td>
-                <td><%= venue.available_parking %></td>
-                <td><%= venue.changing_rooms %></td>
-                <td><%= venue.restrooms %></td>
-                <td><%= venue.electric_outlets %></td>
-                <td><%= venue.indoors %></td>
-                <td><%= venue.outdoors %></td>
-                <td><%= venue.handicap %></td>
-                <td><%= venue.coordinator %></td>
-                <td><%= venue.space %></td>
-                <td><%= venue.capacity %></td>
-                <td><%= link_to 'Show', venue %></td>
-                <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
-                <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table> -->
-
-        <br>
-
-        <%= link_to 'New Venue', new_venue_path %>
-      <<!-- /div>
-    </div>
-</div> -->
+  <tbody>
+    <% @venues.each do |venue| %>
+      <tr>
+        <td><%= venue.name %></td>
+        <td><%= venue.phone_number %></td>
+        <td><%= venue.address %></td>
+        <td><%= venue.city %></td>
+        <td><%= venue.state %></td>
+        <td><%= venue.zip %></td>
+        <td><%= venue.email %></td>
+        <td><%= venue.website %></td>
+        <td><%= venue.facebook %></td>
+        <td><%= venue.twitter %></td>
+        <td><%= venue.instagram %></td>
+        <td><%= venue.space %></td>
+        <td><%= venue.capacity %></td>
+        <td><%= venue.available_parking %></td>
+        <td><%= venue.changing_rooms %></td>
+        <td><%= venue.restrooms %></td>
+        <td><%= venue.electric_outlets %></td>
+        <td><%= venue.indoors %></td>
+        <td><%= venue.outdoors %></td>
+        <td><%= venue.handicap %></td>
+        <td><%= venue.coordinator %></td>
+        <td><%= venue.space %></td>
+        <td><%= venue.capacity %></td>
+        <td><%= link_to 'Show', venue %></td>
+        <td><%= link_to 'Edit', edit_venue_path(venue) %></td>
+        <td><%= link_to 'Destroy', venue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
