@@ -1,109 +1,126 @@
-<%= form_for(@venue) do |f| %>
-  <% if @venue.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@venue.errors.count, "error") %> prohibited this venue from being saved:</h2>
+<div class="main-container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4 col-lg-offset-2">
 
-      <ul>
-      <% @venue.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <%= form_for(@venue) do |f| %>
+        <% if @venue.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@venue.errors.count, "error") %> prohibited this venue from being saved:</h2>
+
+            <ul>
+            <% @venue.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="basic-info">
+          <div class="field">
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+          </div>
+          <div class="field">
+            <%= f.label :phone_number %>
+            <%= f.number_field :phone_number %>
+          </div>
+          <div class="field">
+            <%= f.label :address %>
+            <%= f.text_field :address %>
+          </div>
+          <div class="field">
+            <%= f.label :city %>
+            <%= f.text_field :city %>
+          </div>
+          <div class="field">
+            <%= f.label :state %>
+            <%= f.text_field :state %>
+          </div>
+          <div class="field">
+            <%= f.label :zip %>
+            <%= f.number_field :zip %>
+          </div>
+          <div class="field">
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+          </div>
+          <div class="field">
+            <%= f.label :website %>
+            <%= f.text_field :website %>
+          </div>
+        </div>
+        <div class="social-media">
+          <div class="field">
+            <%= f.label :facebook %>
+            <%= f.text_field :facebook %>
+          </div>
+          <div class="field">
+            <%= f.label :twitter %>
+            <%= f.text_field :twitter %>
+          </div>
+          <div class="field">
+            <%= f.label :instagram %>
+            <%= f.text_field :instagram %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4">
+        <div class="logistics">
+          <div class="field">
+            <%= f.label :space %>
+            <%= f.text_field :space %>
+          </div>
+          <div class="field">
+            <%= f.label :capacity %>
+            <%= f.text_field :capacity %>
+          </div>
+          <div class="field">
+            <%= f.label :available_parking %>
+            <%= f.text_field :available_parking %>
+          </div>
+          <div class="field">
+            <%= f.label :changing_rooms %>
+            <%= f.number_field :changing_rooms %>
+          </div>
+          <div class="field">
+            <%= f.label :restrooms %>
+            <%= f.number_field :restrooms %>
+          </div>
+          <div class="field">
+            <%= f.label :electric_outlets %>
+            <%= f.number_field :electric_outlets %>
+          </div>
+        </div>
+        <span class="checkboxes">
+          <span class="field">
+            <%= f.label :indoors %>
+            <%= f.check_box :indoors %>
+          </span>
+          <span class="field">
+            <%= f.label :outdoors %>
+            <%= f.check_box :outdoors %>
+          </span>
+          <span class="field">
+            <%= f.label :handicap %>
+            <%= f.check_box :handicap %>
+          </span>
+          <span class="field">
+            <%= f.label :coordinator %>
+            <%= f.check_box :coordinator %>
+          </span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4">
+          <div class="detailed-info">
+            <div class"field">
+              <%= f.label :budget %>
+              <%= f.select :budget, options_for_select([['$', 1], ['$$', 2], ['$$$', 3]]) %>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :phone_number %><br>
-    <%= f.number_field :phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.number_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :website %><br>
-    <%= f.text_field :website %>
-  </div>
-  <div class="field">
-    <%= f.label :facebook %><br>
-    <%= f.text_field :facebook %>
-  </div>
-  <div class="field">
-    <%= f.label :twitter %><br>
-    <%= f.text_field :twitter %>
-  </div>
-  <div class="field">
-    <%= f.label :instagram %><br>
-    <%= f.text_field :instagram %>
-  </div>
-  <div class="field">
-    <%= f.label :space %><br>
-    <%= f.text_field :space %>
-  </div>
-  <div class="field">
-    <%= f.label :capacity %><br>
-    <%= f.text_field :capacity %>
-  </div>
-  <div class="field">
-    <%= f.label :available_parking %><br>
-    <%= f.text_field :available_parking %>
-  </div>
-  <div class="field">
-    <%= f.label :changing_rooms %><br>
-    <%= f.number_field :changing_rooms %>
-  </div>
-  <div class="field">
-    <%= f.label :restrooms %><br>
-    <%= f.number_field :restrooms %>
-  </div>
-  <div class="field">
-    <%= f.label :electric_outlets %><br>
-    <%= f.number_field :electric_outlets %>
-  </div>
-  <div class="field">
-    <%= f.label :indoors %><br>
-    <%= f.check_box :indoors %>
-  </div>
-  <div class="field">
-    <%= f.label :outdoors %><br>
-    <%= f.check_box :outdoors %>
-  </div>
-  <div class="field">
-    <%= f.label :handicap %><br>
-    <%= f.check_box :handicap %>
-  </div>
-  <div class="field">
-    <%= f.label :coordinator %><br>
-    <%= f.check_box :coordinator %>
-  </div>
-  <div class="field">
-    <%= f.label :space %><br>
-    <%= f.text_field :space %>
-  </div>
-  <div class="field">
-    <%= f.label :capacity %><br>
-    <%= f.text_field :capacity %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

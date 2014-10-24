@@ -22,9 +22,8 @@ class CreateVenues < ActiveRecord::Migration
       t.boolean :outdoors
       t.boolean :handicap
       t.boolean :coordinator
-      t.float :space
-      t.float :capacity
       t.integer :budget
+
 
       t.timestamps
     end
