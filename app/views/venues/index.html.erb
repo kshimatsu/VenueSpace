@@ -1,21 +1,28 @@
 <div class="main-container">
-    <div class="row">
+  <div class="row">
 
-      <div class="main-container-body">
-        <% @venues.each do |venue| %>
-        <div class="venue-container">
-          <div class="text-container">
-            <a href="/venues/<%= venue.id %>"> <!-- How to do with link_to? -->
-              <%= venue.name %>
-              <p><%= venue.id %></p>
-              <p><%= venue.city %></p>
-              <p><%= venue.state %></p>
-              <p><%= venue.budget %></p>
-            </a>
-          </div>
+    <div class="main-container-body">
+      <% @venues.each do |venue| %>
+      <div class="venue-container">
+        <div class="text-container">
+          <a href="/venues/<%= venue.id %>"> <!-- How to do with link_to? -->
+            <%= venue.name %>
+            <p><%= venue.id %></p>
+            <p><%= venue.city %></p>
+            <p><%= venue.state %></p>
+            <p><%= venue.budget %></p>
+          </a>
         </div>
-        <% end %>
       </div>
+      <% end %>
+    </div>
+
+    <div class="sign-in-options">
+      <a href="/users/sign_in">Is this your venue? Login now!</a> <!-- How to do link_to -->
+      <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+    </div>
+  </div>
+</div>
 
 
 

@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="main-container-row">
-    <div class="main-container-left-bar col-md-2 col-lg-2 col-lg-offset-1">
+    <div class="left-bar col-md-2 col-lg-2 col-lg-offset-1">
       <h2>VENUE NAME</h2>
       <div class="venue-profile-picture">
         <img class="venue-profile-picture" src="http://media-cache-ec0.pinimg.com/236x/b9/d0/0e/b9d00e96d9c7687a1fc238350b8efd04.jpg">
@@ -38,6 +38,7 @@
           <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
         </div>
 
+      <div class="basic-info">
         <p>
           <strong>Name:</strong>
           <%= @venue.name %>
@@ -77,7 +78,9 @@
           <strong>Website:</strong>
           <%= @venue.website %>
         </p>
+      </div>
 
+      <div class="social-media">
         <p>
           <strong>Facebook:</strong>
           <%= @venue.facebook %>
@@ -92,7 +95,9 @@
           <strong>Instagram:</strong>
           <%= @venue.instagram %>
         </p>
+      </div>
 
+      <div class="logistics">
         <p>
           <strong>Space:</strong>
           <%= @venue.space %>
@@ -122,7 +127,9 @@
           <strong>Electric outlets:</strong>
           <%= @venue.electric_outlets %>
         </p>
+      </div>
 
+      <div class="checkboxes">
         <p>
           <strong>Indoors:</strong>
           <%= @venue.indoors %>
@@ -142,15 +149,12 @@
           <strong>Coordinator:</strong>
           <%= @venue.coordinator %>
         </p>
+      </div>
 
+      <div class="detailed-info">
         <p>
-          <strong>Space:</strong>
-          <%= @venue.space %>
-        </p>
-
-        <p>
-          <strong>Capacity:</strong>
-          <%= @venue.capacity %>
+          <strong>Budget:</strong>
+          <%= @venue.budget%>
         </p>
 
         <% if user_signed_in? && current_user.id == @venue.user_id %>

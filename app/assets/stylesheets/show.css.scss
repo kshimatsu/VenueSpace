@@ -1,9 +1,14 @@
-.main-container-left-bar {
+.left-bar {
   border: 1px solid pink;
   margin: 20px 10px 10px 0px;
 }
 
 
+
+.main-container-body {
+  width: 500px; /*need to change this to fit the screen*/
+  border: 1px solid pink;
+}
 
 .venue-profile-picture {
   height: 130px;
@@ -14,9 +19,57 @@
 
 .buttons-for-profile {
   text-align: center;
-  float: left;
 }
 
 .btn {
   float: left;
 }
+
+.basic-info {
+  border: 1px solid pink;
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+  width: 400px;
+}
+
+.social-media {
+  border: 1px solid pink;
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+  width: 400px;
+}
+
+.logistics {
+  border: 1px solid pink;
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+  width: 400px;
+}
+
+.checkboxes {
+  border: 1px solid pink;
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+  width: 400px;
+}
+
+.detailed-info {
+  border: 1px solid pink;
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+  width: 400px;
+}
+
+.actions {
+  border: 1px solid pink;
+  margin: 10px 0px 10px 0px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+  width: 400px;
+}
+
