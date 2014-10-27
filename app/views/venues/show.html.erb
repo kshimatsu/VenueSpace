@@ -1,122 +1,167 @@
-<p id="notice"><%= notice %></p>
+<div class="main-container">
+  <div class="main-container-row">
+    <div class="main-container-left-bar col-md-2 col-lg-2 col-lg-offset-1">
+      <h2>VENUE NAME</h2>
+      <div class="venue-profile-picture">
+        <img class="venue-profile-picture" src="http://media-cache-ec0.pinimg.com/236x/b9/d0/0e/b9d00e96d9c7687a1fc238350b8efd04.jpg">
+      </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @venue.name %>
-</p>
+      <!-- Need to figure out how to align correctly and override Bootstrap -->
+      <div class="buttons-for-profile">
+        <button type="add-to-favorites" class="btn btn-default">Add to Favorites</button>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @venue.phone_number %>
-</p>
+        <button type="price-list" class="btn btn-default">Price List</button>
+      </div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @venue.address %>
-</p>
+      <div class="contact-info">
+        Contact: <%= @venue.email %>
 
-<p>
-  <strong>City:</strong>
-  <%= @venue.city %>
-</p>
+        <p>Phone: <%= @venue.phone_number %>
 
-<p>
-  <strong>State:</strong>
-  <%= @venue.state %>
-</p>
+        <p><a href="<%= @venue.website %>">Website</a>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @venue.zip %>
-</p>
+        <p>Social Media:
+        <p>P T F
+      </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @venue.email %>
-</p>
+    </div>
 
-<p>
-  <strong>Website:</strong>
-  <%= @venue.website %>
-</p>
+    <div class="row">
 
-<p>
-  <strong>Facebook:</strong>
-  <%= @venue.facebook %>
-</p>
+      <div class="main-container-body col-xs-12 col-sm-12 col-md-10 col-lg-8 col-lg-offset-0">
 
-<p>
-  <strong>Twitter:</strong>
-  <%= @venue.twitter %>
-</p>
 
-<p>
-  <strong>Instagram:</strong>
-  <%= @venue.instagram %>
-</p>
 
-<p>
-  <strong>Space:</strong>
-  <%= @venue.space %>
-</p>
+        <p id="notice"><%= notice %></p>
+        <div class="sign-in-options">
+          <a href="/users/sign_in">Is this your venue? Login now!</a> <!-- How to do link_to -->
+          <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+        </div>
 
-<p>
-  <strong>Capacity:</strong>
-  <%= @venue.capacity %>
-</p>
+        <p>
+          <strong>Name:</strong>
+          <%= @venue.name %>
+        </p>
 
-<p>
-  <strong>Available parking:</strong>
-  <%= @venue.available_parking %>
-</p>
+        <p>
+          <strong>Phone number:</strong>
+          <%= @venue.phone_number %>
+        </p>
 
-<p>
-  <strong>Changing rooms:</strong>
-  <%= @venue.changing_rooms %>
-</p>
+        <p>
+          <strong>Address:</strong>
+          <%= @venue.address %>
+        </p>
 
-<p>
-  <strong>Restrooms:</strong>
-  <%= @venue.restrooms %>
-</p>
+        <p>
+          <strong>City:</strong>
+          <%= @venue.city %>
+        </p>
 
-<p>
-  <strong>Electric outlets:</strong>
-  <%= @venue.electric_outlets %>
-</p>
+        <p>
+          <strong>State:</strong>
+          <%= @venue.state %>
+        </p>
 
-<p>
-  <strong>Indoors:</strong>
-  <%= @venue.indoors %>
-</p>
+        <p>
+          <strong>Zip:</strong>
+          <%= @venue.zip %>
+        </p>
 
-<p>
-  <strong>Outdoors:</strong>
-  <%= @venue.outdoors %>
-</p>
+        <p>
+          <strong>Email:</strong>
+          <%= @venue.email %>
+        </p>
 
-<p>
-  <strong>Handicap:</strong>
-  <%= @venue.handicap %>
-</p>
+        <p>
+          <strong>Website:</strong>
+          <%= @venue.website %>
+        </p>
 
-<p>
-  <strong>Coordinator:</strong>
-  <%= @venue.coordinator %>
-</p>
+        <p>
+          <strong>Facebook:</strong>
+          <%= @venue.facebook %>
+        </p>
 
-<p>
-  <strong>Space:</strong>
-  <%= @venue.space %>
-</p>
+        <p>
+          <strong>Twitter:</strong>
+          <%= @venue.twitter %>
+        </p>
 
-<p>
-  <strong>Capacity:</strong>
-  <%= @venue.capacity %>
-</p>
+        <p>
+          <strong>Instagram:</strong>
+          <%= @venue.instagram %>
+        </p>
 
-<% if user_signed_in? && current_user.id == @venue.user_id %>
-<%= link_to 'Edit', edit_venue_path(@venue) %>
-<% end %>
- |
-<%= link_to 'Back', venues_path %>
+        <p>
+          <strong>Space:</strong>
+          <%= @venue.space %>
+        </p>
+
+        <p>
+          <strong>Capacity:</strong>
+          <%= @venue.capacity %>
+        </p>
+
+        <p>
+          <strong>Available parking:</strong>
+          <%= @venue.available_parking %>
+        </p>
+
+        <p>
+          <strong>Changing rooms:</strong>
+          <%= @venue.changing_rooms %>
+        </p>
+
+        <p>
+          <strong>Restrooms:</strong>
+          <%= @venue.restrooms %>
+        </p>
+
+        <p>
+          <strong>Electric outlets:</strong>
+          <%= @venue.electric_outlets %>
+        </p>
+
+        <p>
+          <strong>Indoors:</strong>
+          <%= @venue.indoors %>
+        </p>
+
+        <p>
+          <strong>Outdoors:</strong>
+          <%= @venue.outdoors %>
+        </p>
+
+        <p>
+          <strong>Handicap:</strong>
+          <%= @venue.handicap %>
+        </p>
+
+        <p>
+          <strong>Coordinator:</strong>
+          <%= @venue.coordinator %>
+        </p>
+
+        <p>
+          <strong>Space:</strong>
+          <%= @venue.space %>
+        </p>
+
+        <p>
+          <strong>Capacity:</strong>
+          <%= @venue.capacity %>
+        </p>
+
+        <% if user_signed_in? && current_user.id == @venue.user_id %>
+        <%= link_to 'Edit', edit_venue_path(@venue) %>
+        <% end %>
+         |
+        <%= link_to 'Back', venues_path %>
+
+    </div>
+  </div>
+
+</div>
+</div>
+
