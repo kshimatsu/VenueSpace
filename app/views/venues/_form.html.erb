@@ -119,6 +119,13 @@
           <%= f.select :budget, options_for_select([['$', 1], ['$$', 2], ['$$$', 3]]) %>
         </div>
       </div>
+
+      <div class="photo-album">
+        <div class="field">
+          <%= f.file_field :picture %>
+        </div>
+      </div>
+
     </div>
   </div>
 

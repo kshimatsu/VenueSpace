@@ -162,10 +162,13 @@
         <% end %>
          |
         <%= link_to 'Back', venues_path %>
+      </div>
 
+      <div class="photo-album">
+        <%= image_tag(@venue.picture, :width => 600) if @venue.picture.present? %> <!-- started trying to get photos working with carrier wave -->
+      </div>
     </div>
   </div>
-
-</div>
+  </div>
 </div>
 
