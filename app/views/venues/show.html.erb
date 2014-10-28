@@ -1,13 +1,12 @@
 <div class="main-container">
   <div class="main-container-row">
-    <div class="left-bar col-md-2 col-lg-2 col-lg-offset-1">
+    <div class="left-bar col-md-2 col-md-offset-1">
       <h2><%= @venue.name %></h2>
       <div class="venue-profile-picture">
         <%= image_tag(@venue.picture, :width => 100) if @venue.picture.present? %>
       </div>
       <div class="sign-in-options">
         <a href="/users/sign_in">Is this your venue? Login now!</a> <!-- How to do link_to -->
-        <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
       </div>
       <!-- Need to figure out how to align correctly and override Bootstrap -->
       <div class="buttons-for-profile">
@@ -31,13 +30,10 @@
 
     <div class="row">
 
-      <div class="main-container-body col-xs-12 col-sm-12 col-md-10 col-lg-8 col-lg-offset-0">
-
-
-
+      <div class="main-container-body col-md-8 col-lg-offset-0">
         <p id="notice"><%= notice %></p>
 
-      <div class="basic-info">
+      <div class="basic-info col-md-6">
         <p>
           <strong>Name:</strong>
           <%= @venue.name %>
@@ -79,7 +75,7 @@
         </p>
       </div>
 
-      <div class="logistics">
+      <div class="logistics col-md-6">
         <p>
           <strong>Space:</strong>
           <%= @venue.space %>
@@ -111,7 +107,7 @@
         </p>
       </div>
 
-      <div class="checkboxes">
+      <div class="checkboxes col-md-6">
         <p>
           <strong>Indoors:</strong>
           <%= @venue.indoors %>
@@ -133,22 +129,21 @@
         </p>
       </div>
 
-      <div class="detailed-info">
+      <div class="detailed-info col-md-6">
         <p>
           <strong>Budget:</strong>
           <%= @venue.budget%>
         </p>
       </div>
 
-      <div class="photo-album">
+      <div class="photo-album col-md-6">
         <%= image_tag(@venue.picture, :width => 600) if @venue.picture.present? %>
       </div>
 
-      <div class="footer">
+      <div class="col-md-12">
         <% if user_signed_in? && current_user.id == @venue.user_id %>
         <%= link_to 'Edit', edit_venue_path(@venue) %>
         <% end %>
-         |
         <%= link_to 'Back', venues_path %>
       </div>
 

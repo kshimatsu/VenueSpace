@@ -48,5 +48,13 @@
 }
 
 .yield-container {
-  text-align: center
+  text-align: center;
+  margin: 20px 0px 20px 0px;
+}
+
+.footer {
+  border: 1px solid pink;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px
 }

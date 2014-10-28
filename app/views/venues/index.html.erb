@@ -1,9 +1,12 @@
 <div class="main-container">
   <div class="row">
 
-    <div class="main-container-body">
+    <div class="col-md-8 col-md-offset-2">
       <% @venues.each do |venue| %>
       <div class="venue-container">
+        <div class="thumbnail">
+          <%= image_tag(venue.picture, :width => 200) if venue.picture.present? %>
+        </div>
         <div class="text-container">
           <a href="/venues/<%= venue.id %>"> <!-- How to do with link_to? -->
             <%= venue.name %>
@@ -17,10 +20,7 @@
       <% end %>
     </div>
 
-    <div class="sign-in-options">
-      <a href="/users/sign_in">Is this your venue? Login now!</a> <!-- How to do link_to -->
-      <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-    </div>
+
   </div>
 </div>
 
