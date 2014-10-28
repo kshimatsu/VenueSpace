@@ -1,11 +1,14 @@
 <div class="main-container">
   <div class="main-container-row">
     <div class="left-bar col-md-2 col-lg-2 col-lg-offset-1">
-      <h2>VENUE NAME</h2>
+      <h2><%= @venue.name %></h2>
       <div class="venue-profile-picture">
-        <img class="venue-profile-picture" src="http://media-cache-ec0.pinimg.com/236x/b9/d0/0e/b9d00e96d9c7687a1fc238350b8efd04.jpg">
+        <%= image_tag(@venue.picture, :width => 100) if @venue.picture.present? %>
       </div>
-
+      <div class="sign-in-options">
+        <a href="/users/sign_in">Is this your venue? Login now!</a> <!-- How to do link_to -->
+        <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+      </div>
       <!-- Need to figure out how to align correctly and override Bootstrap -->
       <div class="buttons-for-profile">
         <button type="add-to-favorites" class="btn btn-default">Add to Favorites</button>
@@ -33,10 +36,6 @@
 
 
         <p id="notice"><%= notice %></p>
-        <div class="sign-in-options">
-          <a href="/users/sign_in">Is this your venue? Login now!</a> <!-- How to do link_to -->
-          <p><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-        </div>
 
       <div class="basic-info">
         <p>
@@ -77,23 +76,6 @@
         <p>
           <strong>Website:</strong>
           <%= @venue.website %>
-        </p>
-      </div>
-
-      <div class="social-media">
-        <p>
-          <strong>Facebook:</strong>
-          <%= @venue.facebook %>
-        </p>
-
-        <p>
-          <strong>Twitter:</strong>
-          <%= @venue.twitter %>
-        </p>
-
-        <p>
-          <strong>Instagram:</strong>
-          <%= @venue.instagram %>
         </p>
       </div>
 
@@ -156,7 +138,13 @@
           <strong>Budget:</strong>
           <%= @venue.budget%>
         </p>
+      </div>
 
+      <div class="photo-album">
+        <%= image_tag(@venue.picture, :width => 600) if @venue.picture.present? %>
+      </div>
+
+      <div class="footer">
         <% if user_signed_in? && current_user.id == @venue.user_id %>
         <%= link_to 'Edit', edit_venue_path(@venue) %>
         <% end %>
@@ -164,9 +152,10 @@
         <%= link_to 'Back', venues_path %>
       </div>
 
-      <div class="photo-album">
-        <%= image_tag(@venue.picture, :width => 600) if @venue.picture.present? %> <!-- started trying to get photos working with carrier wave -->
-      </div>
+
+
+
+
     </div>
   </div>
   </div>

@@ -5,7 +5,6 @@
 
 .main-container-body {
   width: 500px; /*need to change this to fit the screen*/
-  border: 1px solid pink;
 }
 
 .venue-profile-picture {
@@ -17,18 +16,18 @@
 
 .buttons-for-profile {
   text-align: center;
-}
-
-.btn {
   float: left;
 }
+
+
 
 .basic-info {
   border: 1px solid pink;
   margin: 10px 0px 10px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 400px;
+  width: 350px;
+  float: left;
 }
 
 .social-media {
@@ -36,7 +35,7 @@
   margin: 10px 0px 0px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 400px;
+  width: 350px;
 }
 
 .logistics {
@@ -44,7 +43,8 @@
   margin: 10px 0px 0px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 400px;
+  width: 350px;
+  float: left;
 }
 
 .checkboxes {
@@ -52,7 +52,8 @@
   margin: 10px 0px 0px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 400px;
+  width: 350px;
+  float: left;
 }
 
 .detailed-info {
@@ -60,7 +61,8 @@
   margin: 10px 0px 0px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 400px;
+  width: 350px;
+  float: left;
 }
 
 .actions {
@@ -68,6 +70,7 @@
   margin: 10px 0px 10px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 400px;
+  width: 350px;
+  float: left;
 }
 
