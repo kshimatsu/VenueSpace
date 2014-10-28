@@ -10,10 +10,8 @@
         <div class="text-container">
           <a href="/venues/<%= venue.id %>"> <!-- How to do with link_to? -->
             <%= venue.name %>
-            <p><%= venue.id %></p>
-            <p><%= venue.city %></p>
-            <p><%= venue.state %></p>
-            <p><%= venue.budget %></p>
+            <p><%= venue.city %>, <%= venue.state %></p>
+            <br><%= venue.budget %></br>
           </a>
         </div>
       </div>

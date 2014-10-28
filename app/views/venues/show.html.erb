@@ -3,7 +3,7 @@
     <div class="left-bar col-md-2 col-md-offset-1">
       <h2><%= @venue.name %></h2>
       <div class="venue-profile-picture">
-        <%= image_tag(@venue.picture, :width => 100) if @venue.picture.present? %>
+        <%= image_tag(@venue.picture, :width => 130) if @venue.picture.present? %>
       </div>
       <div class="sign-in-options">
         <a href="/users/sign_in">Is this your venue? Login now!</a> <!-- How to do link_to -->
@@ -75,6 +75,10 @@
         </p>
       </div>
 
+      <div class="photo-album col-md-6">
+        <%= image_tag(@venue.picture, :width => 400) if @venue.picture.present? %>
+      </div>
+
       <div class="logistics col-md-6">
         <p>
           <strong>Space:</strong>
@@ -134,10 +138,6 @@
           <strong>Budget:</strong>
           <%= @venue.budget%>
         </p>
-      </div>
-
-      <div class="photo-album col-md-6">
-        <%= image_tag(@venue.picture, :width => 600) if @venue.picture.present? %>
       </div>
 
       <div class="col-md-12">
