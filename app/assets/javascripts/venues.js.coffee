@@ -1,18 +1,19 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
+#
 #= require underscore
 #= require gmaps/google
 
-@convert = (objects) ->
+@convert = (venue) ->
   array = []
 
-  for x in objects
-    y =
-      latitude: x.latitude
-      longitude: x.longitude
-      infowindow: x.name
-    array.push y
+  y =
+    lat: venue.latitude
+    lng: venue.longitude
+    infowindow: venue.name
+
+  array.push y
 
   googleMap array
 
@@ -29,6 +30,6 @@
 
 $ ->
   $.ajax
-    url: '/places.json'
+    url: '/venues/IDWHATOTPUT.json'
   .done (data) ->
     convert data

@@ -5,5 +5,7 @@ class Venue < ActiveRecord::Base
   reverse_geocoded_by :latitude, :longitude
   after_validation :reverse_geocode  # auto-fetch address
   geocoded_by :address
-  after_validation :geocode          # auto-fetch coordinates
+
+  # auto-fetch coordinates
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
 end

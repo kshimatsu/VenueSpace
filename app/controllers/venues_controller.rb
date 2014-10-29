@@ -37,8 +37,8 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
 
     @locationhash = Gmaps4rails.build_markers(@venues) do |venue, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
+      marker.latitude venue.latitude
+      marker.longitude venue.longitude
     end
   end
 
