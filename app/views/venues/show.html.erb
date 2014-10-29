@@ -16,13 +16,13 @@
       </div>
 
       <div class="contact-info">
-        Contact: <%= @venue.email %>
-
-        <p>Phone: <%= @venue.phone_number %>
-
+        <strong>Contact:</strong>
+         <%= @venue.email %>
+        <p><%= @venue.address %>, <%= @venue.city %>, <%= @venue.state %>, <%= @venue.zip %></p>
+        <p><%= @venue.phone_number %></p>
         <p><a href="<%= @venue.website %>">Website</a>
 
-        <p>Social Media:
+        <p><strong>Social Media:</strong>
         <p>P T F
       </div>
 
@@ -40,31 +40,6 @@
         </p>
 
         <p>
-          <strong>Phone number:</strong>
-          <%= @venue.phone_number %>
-        </p>
-
-        <p>
-          <strong>Address:</strong>
-          <%= @venue.address %>
-        </p>
-
-        <p>
-          <strong>City:</strong>
-          <%= @venue.city %>
-        </p>
-
-        <p>
-          <strong>State:</strong>
-          <%= @venue.state %>
-        </p>
-
-        <p>
-          <strong>Zip:</strong>
-          <%= @venue.zip %>
-        </p>
-
-        <p>
           <strong>Email:</strong>
           <%= @venue.email %>
         </p>
@@ -76,7 +51,7 @@
       </div>
 
       <div class="photo-album col-md-6">
-        <%= image_tag(@venue.picture, :width => 400) if @venue.picture.present? %>
+        <%= image_tag(@venue.picture) if @venue.picture.present? %>
       </div>
 
       <div class="logistics col-md-6">

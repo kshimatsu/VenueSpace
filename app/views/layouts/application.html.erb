@@ -42,6 +42,7 @@
           <div class="form-group">
             <input type="text" name="city" class="form-control" placeholder="Search by city">
           </div>
+
           <div class="checkbox">
             <label>
               <input type="checkbox" name="budget_1"> $
@@ -57,29 +58,22 @@
           <button type="submit" class="btn btn-default">Search</button>
         </form>
 
-
-
       </div>
-
     </div>
 
     <div class="yield-container">
-
           <%= yield %>
-
     </div>
 
-
     <div class="footer">
-      <a href="/users/sign_in">Login now!</a> <!-- How to do link_to -->
+      <a href="/users/sign_in">Venue login</a>
       <p> Not you? <%= link_to "Logout", destroy_user_session_path, :method => :delete %></p>
     </div>
 
   </div>
 
-
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <%= javascript_include_tag '//maps.google.com/maps/api/js?v=3.13&amp;sensor=false&amp;libraries=geometry' %>
+  <%= javascript_include_tag '//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </body>
 </html>

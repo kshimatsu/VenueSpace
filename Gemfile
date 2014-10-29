@@ -28,6 +28,15 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 # gem 'spring',        group: :development
 
+# Show Google Maps in rails application
+gem 'gmaps4rails'
+
+# Geocoding solution in rails application
+gem 'geocoder'
+
+# Frontend JavaScript library used by Google Map Utilities
+gem 'underscore-rails'
+
 group :development do
   # Spring speeds up development by keeping your application running in the background.
   #> https://github.com/rails/spring
