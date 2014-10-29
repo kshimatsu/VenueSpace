@@ -27,6 +27,7 @@
     markers = handler.addMarkers(content)
     handler.bounds.extendWith markers
     handler.fitMapToBounds()
+    handler.getMap().setZoom(15);
 
 $ ->
   console.log "fired!"
