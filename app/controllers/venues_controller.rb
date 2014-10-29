@@ -35,6 +35,11 @@ class VenuesController < ApplicationController
   # GET /venues/1.json
   def show
     @venue = Venue.find(params[:id])
+
+    @locationhash = Gmaps4rails.build_markers(@venues) do |venue, marker|
+      marker.latitude venue.latitude
+      marker.longitude venue.longitude
+    end
   end
 
   # GET /venues/new

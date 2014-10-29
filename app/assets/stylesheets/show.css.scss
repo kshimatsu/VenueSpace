@@ -18,6 +18,16 @@
 
 .btn btn-default {
 
+#map {
+  width: 800px;
+  height: 400px;
+}
+
+.venue-profile-picture {
+  float: center;
+  width: 130px;
+  border: 1px solid pink;
+  margin: 10px 0px 20px 0px;
 }
 
 .buttons-for-profile {
@@ -25,7 +35,7 @@
   float: left;
 }
 
-.checkboxes {
+.basic-info {
   border: 1px solid pink;
   margin: 10px 0px 0px 0px;
   text-align: left;
