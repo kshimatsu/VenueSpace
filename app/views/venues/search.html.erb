@@ -7,7 +7,7 @@
       <% @venues.each do |venue| %>
       <div class="venue-container">
         <div class="thumbnail">
-          <a href="/venues/<%= venue.id %>">
+          <a href="/venues/<%= venue.id %>" data-no-turbolink>
           <%= image_tag(venue.picture, :width => 200) if venue.picture.present? %>
         </div>
         <div class="text-container">
