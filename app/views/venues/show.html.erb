@@ -5,7 +5,7 @@
   <div class="main-container">
     <div class="main-container-row">
       <div class="left-bar col-md-2 col-md-offset-1">
-        <h2><%= @venue.name %></h2>
+        <h2 data-id="<%= @venue.id %>"><%= @venue.name %></h2>
         <div class="venue-profile-picture">
           <%= image_tag(@venue.picture, :width => 130) if @venue.picture.present? %>
         </div>

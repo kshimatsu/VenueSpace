@@ -29,7 +29,10 @@
     handler.fitMapToBounds()
 
 $ ->
+  console.log "fired!"
+  venueId = $('*[data-id]').data("id")
+
   $.ajax
-    url: '/venues/IDWHATOTPUT.json'
+    url: '/venues/' + venueId + '.json'
   .done (data) ->
     convert data

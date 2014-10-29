@@ -8,7 +8,7 @@
           <%= image_tag(venue.picture, :width => 200) if venue.picture.present? %>
         </div>
         <div class="text-container">
-          <a href="/venues/<%= venue.id %>"> <!-- How to do with link_to? -->
+          <a href="/venues/<%= venue.id %>" data-no-turbolink> <!-- How to do with link_to? -->
             <%= venue.name %>
             <p><%= venue.city %>, <%= venue.state %></p>
             <br><%= venue.budget %></br>
