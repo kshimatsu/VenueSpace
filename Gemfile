@@ -1,6 +1,15 @@
 source 'https://rubygems.org'
 
 gem 'carrierwave'
+# Show Google Maps in rails application
+
+gem 'gmaps4rails'
+
+# Geocoding solution in rails application
+gem 'geocoder'
+
+# Frontend JavaScript library used by Google Map Utilities
+gem 'underscore-rails'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

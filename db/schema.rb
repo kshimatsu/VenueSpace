@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028092704) do
+ActiveRecord::Schema.define(version: 20141029072520) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 20141028092704) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "picture"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end
