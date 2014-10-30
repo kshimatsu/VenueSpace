@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20141029072520) do
     t.boolean  "handicap"
     t.boolean  "coordinator"
     t.integer  "budget"
+    t.text     "faqs"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"

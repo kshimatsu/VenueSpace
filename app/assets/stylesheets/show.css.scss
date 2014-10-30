@@ -15,8 +15,12 @@
   width: 350px;
   float: left;
 }*/
+body > div > div.yield-container > div > div > div.left-bar.col-md-2.col-md-offset-1 > div.buttons-for-profile > button:nth-child(1) {
+  margin: 10px 10px 10px 10px;
+}
 
-.btn btn-default {
+.buttons-for-profile {
+  margin-bottom: 20px;
 }
 
 #map {

@@ -23,6 +23,7 @@ class CreateVenues < ActiveRecord::Migration
       t.boolean :handicap
       t.boolean :coordinator
       t.integer :budget
+      t.text :faqs
 
 
       t.timestamps

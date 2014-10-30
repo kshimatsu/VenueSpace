@@ -71,15 +71,15 @@
       <div class="logistics">
         <div class="field">
           <%= f.label :space %>
-          <%= f.text_field :space %>
+          <%= f.text_field :space %> sq.ft.
         </div>
         <div class="field">
           <%= f.label :capacity %>
-          <%= f.text_field :capacity %>
+          <%= f.text_field :capacity %> people
         </div>
         <div class="field">
           <%= f.label :available_parking %>
-          <%= f.text_field :available_parking %>
+          <%= f.text_field :available_parking %> spaces
         </div>
         <div class="field">
           <%= f.label :changing_rooms %>
@@ -118,12 +118,26 @@
           <%= f.label :budget %>
           <%= f.select :budget, options_for_select([['$', 1], ['$$', 2], ['$$$', 3]]) %>
         </div>
+        <div class="field">
+          <%= f.label :faqs %>
+          <%= f.text_area :faqs %>
+        </div>
       </div>
 
       <div class="photo-album">
         <div class="field">
           <%= f.file_field :picture %>
         </div>
+        <div class="field">
+          <%= f.file_field :picture %>
+        </div>
+        <div class="field">
+          <%= f.file_field :picture %>
+        </div>
+        <div class="field">
+          <%= f.file_field :picture %>
+        </div>
+
       </div>
 
     </div>
