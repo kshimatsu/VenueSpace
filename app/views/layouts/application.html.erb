@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>VenueSpace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
@@ -15,6 +15,7 @@
     <div class="header">
       <span class="corner-title">
         <a href="/">VenueSpace</a>
+        <a href="/venues/new">New Venue</a>
       </span>
 
       <span class="login">

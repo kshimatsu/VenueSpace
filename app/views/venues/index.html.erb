@@ -7,6 +7,7 @@
         <div class="thumbnail">
           <a href="/venues/<%= venue.id %>" data-no-turbolink> <!-- How to do with link_to? -->
           <%= image_tag(venue.picture, :width => 200) if venue.picture.present? %>
+          <%= image_tag(venue.medias.first.file_name) if venue.medias.count > 0 %>
         </div>
         <div class="text-container">
           <%= venue.name %>
