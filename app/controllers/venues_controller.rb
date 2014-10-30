@@ -20,12 +20,15 @@ class VenuesController < ApplicationController
       budget = 3
     end
 
-    if params[:city] != '' && budget != 0
-      @venues = Venue.where city: params[:city], budget: budget
-    elsif params[:city] == ''
+    # raise
+    if params[:city].downcase != '' && budget != 0
+      # @venues = Venue.where city: params[:city].downcase, budget: budget
+      @venues = Venue.where "lower(city) = ? AND budget = ?", params[:city].downcase, budget
+    elsif params[:city].downcase == ''
       @venues = Venue.where budget: budget
     elsif params[:city] != ''
-      @venues = Venue.where city: params[:city]
+      # @venues = Venue.where city: params[:city].downcase
+      @venues = Venue.where "lower(city) = ?", params[:city].downcase
     else
       @venues = Venue.all
     end
