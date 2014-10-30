@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'carrierwave'
-# Show Google Maps in rails application
-
-gem 'gmaps4rails'
 
 # Geocoding solution in rails application
 gem 'geocoder'
@@ -14,8 +11,16 @@ gem 'underscore-rails'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
+
+group :development do
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
