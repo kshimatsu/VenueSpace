@@ -2,11 +2,7 @@ source 'https://rubygems.org'
 
 gem 'carrierwave'
 
-# Geocoding solution in rails application
-gem 'geocoder'
-
-# Frontend JavaScript library used by Google Map Utilities
-gem 'underscore-rails'
+gem 'dropzonejs-rails'
 
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
