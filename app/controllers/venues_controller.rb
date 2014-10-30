@@ -59,6 +59,9 @@ class VenuesController < ApplicationController
   def create
     @venue = Venue.new(venue_params)
 
+    medias = Media.last(params[:photo_count])
+    @venue.medias = medias
+
     respond_to do |format|
       if @venue.save
         format.html { redirect_to @venue, notice: 'Venue was successfully created.' }

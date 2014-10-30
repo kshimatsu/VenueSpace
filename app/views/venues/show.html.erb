@@ -110,6 +110,10 @@
           MAP HERE
         </div>
 
+        <% @venue.medias.each do |media| %>
+          <%= image_tag(media.file_name, :width => 130) if media.file_name.present? %>
+        <% end %>
+
         <div class="col-md-12">
           <% if user_signed_in? && current_user.id == @venue.user_id %>
           <%= link_to 'Edit', edit_venue_path(@venue) %>

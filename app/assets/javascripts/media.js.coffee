@@ -8,4 +8,6 @@ $ ->
   mediaDropzone = new Dropzone("#media-dropzone")
 
   mediaDropzone.on "success", (file, responseText) ->
-    imageUrl = responseText.file_name.url
+    value = parseInt($('#photo_count').val())
+    value++
+    $('#photo_count').val(value)

@@ -1,4 +1,5 @@
 class Venue < ActiveRecord::Base
+  has_many :medias
   belongs_to :user
   mount_uploader :picture, PictureUploader
 
