@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20141030121700) do
 
   create_table "venues", force: true do |t|
     t.string   "name"
-    t.integer  "phone_number"
+    t.string  "phone_number"
     t.string   "address"
     t.string   "city"
     t.string   "state"
