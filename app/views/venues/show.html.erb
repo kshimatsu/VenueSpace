@@ -40,6 +40,17 @@
         <div class="main-container-body col-md-8 col-lg-offset-0">
           <p id="notice"><%= notice %></p>
 
+          <div class="image-container">
+          <% @venue.medias.each do |media| %>
+            <%= image_tag(media.file_name, :width => 400 ) if media.file_name.present? %>
+          <% end %>
+          </div>
+
+          <div class="faqs">
+            <strong>FAQs:</strong>
+            <%= @venue.faqs %>
+          </div>
+
           <div class="basic-info col-md-6">
           <p>
             <strong>Name:</strong>
@@ -48,9 +59,9 @@
 
         </div>
 
-        <div class="photo-album col-md-6">
+        <!-- <div class="photo-album col-md-6">
           <%= image_tag(@venue.picture) if @venue.picture.present? %>
-        </div>
+        </div> -->
 
         <div class="logistics col-md-6">
           <p>
@@ -110,9 +121,7 @@
           MAP HERE
         </div>
 
-        <% @venue.medias.each do |media| %>
-          <%= image_tag(media.file_name, :width => 130) if media.file_name.present? %>
-        <% end %>
+
 
         <div class="col-md-12">
           <% if user_signed_in? && current_user.id == @venue.user_id %>

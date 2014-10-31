@@ -1,46 +1,27 @@
-.basic-info {
-  border: 1px solid pink;
-  margin: 10px 0px 10px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-}
-
-.social-media {
-  border: 1px solid pink;
-  margin: 10px 0px 0px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-
-}
-
-.logistics {
-  border: 1px solid pink;
-  margin: 10px 0px 0px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-
-}
-
-.checkboxes {
-  border: 1px solid pink;
-  margin: 10px 0px 0px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-}
-
-.detailed-info {
-  border: 1px solid pink;
-  margin: 10px 0px 0px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-
-}
-
 .actions {
-  border: 1px solid pink;
+/*  border: 1px solid pink;*/
   margin: 10px 0px 10px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-
 }
 
+.dropzone {
+  height: 100px;
+}
+
+.info-container {
+ /* border: 1px solid pink;*/
+  margin: 10px 0px 0px 0px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+}
+
+.main-container {
+  border: 1px solid pink;
+}
+
+.photo-album {
+  width: 830px;
+  border: solid pink 1px;
+  margin: 5px;
+}

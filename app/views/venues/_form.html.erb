@@ -3,8 +3,8 @@
 
   <div class="row">
 
+<!-- BEGIN LEFT COLUMN -->
     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4 col-lg-offset-2">
-
 
       <% if @venue.errors.any? %>
         <div id="error_explanation">
@@ -17,7 +17,8 @@
           </ul>
         </div>
       <% end %>
-      <div class="basic-info">
+
+      <div class="info-container">
         <div class="field">
           <%= f.label :name %>
           <%= f.text_field :name %>
@@ -51,7 +52,8 @@
           <%= f.text_field :website %>
         </div>
       </div>
-      <div class="social-media">
+
+      <div class="info-container">
         <div class="field">
           <%= f.label :facebook %>
           <%= f.text_field :facebook %>
@@ -66,9 +68,11 @@
         </div>
       </div>
     </div>
+<!-- FINISH LEFT COLUMN -->
 
+<!-- BEGIN RIGHT COLUMN -->
     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4">
-      <div class="logistics">
+      <div class="info-container">
         <div class="field">
           <%= f.label :space %>
           <%= f.text_field :space %> sq.ft.
@@ -94,7 +98,7 @@
           <%= f.number_field :electric_outlets %>
         </div>
       </div>
-      <div class="checkboxes">
+      <div class="info-container">
         <span class="field">
           <%= f.label :indoors %>
           <%= f.check_box :indoors %>
@@ -113,39 +117,47 @@
         </span>
       </div>
 
-      <div class="detailed-info">
+      <div class="info-container">
         <div class="field">
           <%= f.label :budget %>
           <%= f.select :budget, options_for_select([['$', 1], ['$$', 2], ['$$$', 3]]) %>
         </div>
-        <div class="field">
-          <%= f.label :faqs %>
-          <%= f.text_area :faqs %>
-        </div>
-
+      </div>
         <%= hidden_field_tag :photo_count, 0 %>
-      </div>
-
     </div>
-  </div>
+<!-- FINISH RIGHT COLUMN -->
 
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-lg-offset-2">
-      <div class="actions">
-        <%= f.submit %>
+<!-- FAQS -->
+    <div class="col-lg-8 col-lg-offset-2">
+      Include any <%= f.label :faqs %>
+      <div class="field">
+        <%= f.text_area :faqs, :id => "text_area", :cols => 140, :rows => 10 %>
       </div>
     </div>
-  </div>
+<!-- FINISH FAQs -->
+
+<!-- SUBMIT ROW -->
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </div>
+    </div>
+
   <% end %>
 
-  <div class="photo-album">
-    <form action="/media" id="media-dropzone" class="dropzone" enctype="multipart/form-data">
-      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-      <div class="fallback">
-        <input name="file" type="file" multiple />
+<!-- PHOTO DROP ZONE -->
+    <div class="col-lg-4 col-lg-offset-2">
+      <div class="photo-album">
+        <form action="/media" id="media-dropzone" class="dropzone" enctype="multipart/form-data">
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+          <div class="fallback">
+            <input name="file" type="file" multiple />
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+<!-- FINISH PHOTO DROP ZONE -->
   </div>
-
-
 </div>
