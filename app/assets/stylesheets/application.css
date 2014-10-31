@@ -15,9 +15,14 @@
  *= require_self
  */
 
+body {
+  font-color: #807062;
+  border: #E6CDB8 solid 1px;
+}
 
 .large-outer-container {
   text-align: center;
+  background-color: #FFFBF5;
 }
 
 .row {
@@ -59,7 +64,7 @@
 }
 
 .footer {
-  border: 1px solid pink;
+  clear: both;
   text-align: center;
   margin-top: 20px;
   padding-top: 10px

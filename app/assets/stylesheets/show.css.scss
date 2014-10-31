@@ -1,26 +1,11 @@
-/*.actions {
-  border: 1px solid pink;
-  margin: 10px 0px 10px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-  width: 350px;
-  float: left;
+
+
+.budget {
+  margin: 10px;
 }
 
-.basic-info {
-  border: 1px solid pink;
-  margin: 10px 0px 10px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-  width: 350px;
-  float: left;
-}*/
-body > div > div.yield-container > div > div > div.left-bar.col-md-2.col-md-offset-1 > div.buttons-for-profile > button:nth-child(1) {
-  margin: 10px 10px 10px 10px;
-}
-
-.buttons-for-profile {
-  margin-bottom: 20px;
+h2 {
+  margin: 20px auto;
 }
 
 #map {
@@ -28,20 +13,18 @@ body > div > div.yield-container > div > div > div.left-bar.col-md-2.col-md-offs
   height: 400px;
 }
 
-.venue-profile-picture {
-  float: center;
-  width: 130px;
-  border: 1px solid pink;
-  margin: 10px 0px 20px 0px;
+.main-container {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .buttons-for-profile {
   text-align: center;
   float: left;
+  margin-bottom: 20px;
 }
 
 .basic-info {
-  border: 1px solid pink;
   margin: 10px 0px 0px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
@@ -50,27 +33,30 @@ body > div > div.yield-container > div > div > div.left-bar.col-md-2.col-md-offs
 }
 
 .faqs {
-  border: 1px solid pink;
   margin: 10px 0px 0px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 800px;
   float: left;
 }
-/*.detailed-info {
-  border: 1px solid pink;
-  margin: 10px 0px 0px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-  width: 350px;
-  float: left;
-}*/
+
+.col-md-6 {
+  padding: 15;
+}
+
+.image-container {
+  padding: 10px;
+}
 
 .left-bar {
-  border: 1px solid pink;
-  margin: 20px 10px 10px 0px;
+  border: 1px solid #E6CDB8;
+  margin: 15px 10px auto auto ;
+  background-color: #FFFFFF;
 }
 
+#venue_image {
+  width: 350px;
+  margin: 5px;
+}
 /*.logistics {
   border: 1px solid pink;
   margin: 10px 0px 0px 0px;
@@ -81,11 +67,12 @@ body > div > div.yield-container > div > div > div.left-bar.col-md-2.col-md-offs
 }*/
 
 .main-container-body {
-  border: 1px solid pink;
+  background-color: #FFFFFF;
+  border: 1px solid #E6CDB8;
   margin: 10px 0px 0px 0px;
   text-align: left;
   padding: 15px 15px 15px 15px;
-  width: 350px;
+  font-color: #807062;
 }
 
 .navbar-form .radio label, .navbar-form .checkbox label {
@@ -95,14 +82,7 @@ body > div > div.yield-container > div > div > div.left-bar.col-md-2.col-md-offs
 .venue-profile-picture {
   float: center;
   width: 130px;
-  border: 1px solid pink;
+  border: 1px solid #E6CDB8;
   margin: 10px 0px 20px 0px;
 }
 
-.social-media {
-  border: 1px solid pink;
-  margin: 10px 0px 0px 0px;
-  text-align: left;
-  padding: 15px 15px 15px 15px;
-  width: 350px;
-}

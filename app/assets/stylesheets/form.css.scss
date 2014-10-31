@@ -5,8 +5,10 @@
   padding: 15px 15px 15px 15px;
 }
 .col-lg-8 {
-  border: pink solid 1px;
+  border: #E6CDB8 solid 1px;
   padding-top: 20px;
+  background-color: #FFFFFF;
+  color: #807062;
 }
 
 .dropzone {
@@ -23,6 +25,9 @@
   height: 300px;
 }
 
+h1 {
+  color: #807062;
+}
 .info-container {
  /* border: 1px solid pink;*/
   margin: 5px 0px 0px 0px;
@@ -33,6 +38,5 @@
 .dropzone {
   width: 100%;
   min-height: 200px;
-  border: solid pink 1px;
   margin-bottom: 20px
 }
