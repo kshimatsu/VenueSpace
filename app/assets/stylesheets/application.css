@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.row {
+  margin: 0;
+}
+
 .corner-title {
   float: left;
   padding: 10px 10px 10px 10px;
@@ -50,7 +54,8 @@
 
 .yield-container {
   text-align: center;
-  margin: 20px 0px 20px 0px;
+  margin: 20px auto;
+  width: 1050px;
 }
 
 .footer {

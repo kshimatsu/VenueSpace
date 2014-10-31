@@ -4,24 +4,35 @@
   text-align: left;
   padding: 15px 15px 15px 15px;
 }
+.col-lg-8 {
+  border: pink solid 1px;
+  padding-top: 20px;
+}
 
 .dropzone {
   height: 100px;
 }
 
+.faq-title {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.faqs-field textarea {
+  width: 100%;
+  height: 300px;
+}
+
 .info-container {
  /* border: 1px solid pink;*/
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0px 0px 0px;
   text-align: left;
-  padding: 15px 15px 15px 15px;
+  padding: 10px auto;
 }
 
-.main-container {
-  border: 1px solid pink;
-}
-
-.photo-album {
-  width: 830px;
+.dropzone {
+  width: 100%;
+  min-height: 200px;
   border: solid pink 1px;
-  margin: 5px;
+  margin-bottom: 20px
 }

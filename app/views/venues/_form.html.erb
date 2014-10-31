@@ -1,10 +1,25 @@
 <div class="main-container">
-  <%= form_for(@venue) do |f| %>
 
   <div class="row">
 
+    <div class="form-body col-lg-8 col-lg-offset-2">
+<!-- PHOTO DROP ZONE -->
+      <div class="photo-upload-container col-lg-12">
+        <form action="/media" id="media-dropzone" class="dropzone" enctype="multipart/form-data">
+          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+          <div class="fallback">
+            <input name="file" type="file" multiple />
+          </div>
+        </form>
+      </div>
+
+<!-- FINISH PHOTO DROP ZONE -->
+
+  <%= form_for(@venue) do |f| %>
+
+
 <!-- BEGIN LEFT COLUMN -->
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4 col-lg-offset-2">
+    <div class="col-lg-6">
 
       <% if @venue.errors.any? %>
         <div id="error_explanation">
@@ -71,7 +86,7 @@
 <!-- FINISH LEFT COLUMN -->
 
 <!-- BEGIN RIGHT COLUMN -->
-    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-4">
+    <div class="col-lg-6">
       <div class="info-container">
         <div class="field">
           <%= f.label :space %>
@@ -99,22 +114,22 @@
         </div>
       </div>
       <div class="info-container">
-        <span class="field">
+        <div class="field">
           <%= f.label :indoors %>
           <%= f.check_box :indoors %>
-        </span>
-        <span class="field">
+        </div>
+        <div class="field">
           <%= f.label :outdoors %>
           <%= f.check_box :outdoors %>
-        </span>
-        <span class="field">
+        </div>
+        <div class="field">
           <%= f.label :handicap %>
           <%= f.check_box :handicap %>
-        </span>
-        <span class="field">
+        </div>
+        <div class="field">
           <%= f.label :coordinator %>
           <%= f.check_box :coordinator %>
-        </span>
+        </div>
       </div>
 
       <div class="info-container">
@@ -128,17 +143,19 @@
 <!-- FINISH RIGHT COLUMN -->
 
 <!-- FAQS -->
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-lg-12">
+      <div class="faq-title">
       Include any <%= f.label :faqs %>
-      <div class="field">
-        <%= f.text_area :faqs, :id => "text_area", :cols => 140, :rows => 10 %>
+      </div>
+      <div class="faqs-field">
+        <%= f.text_area :faqs, :id => "text_area" %>
       </div>
     </div>
 <!-- FINISH FAQs -->
 
 <!-- SUBMIT ROW -->
     <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
+      <div class="col-lg-12">
         <div class="actions">
           <%= f.submit %>
         </div>
@@ -147,17 +164,6 @@
 
   <% end %>
 
-<!-- PHOTO DROP ZONE -->
-    <div class="col-lg-4 col-lg-offset-2">
-      <div class="photo-album">
-        <form action="/media" id="media-dropzone" class="dropzone" enctype="multipart/form-data">
-          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-          <div class="fallback">
-            <input name="file" type="file" multiple />
-          </div>
-        </form>
-      </div>
     </div>
-<!-- FINISH PHOTO DROP ZONE -->
   </div>
 </div>
